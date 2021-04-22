@@ -1,3 +1,16 @@
 const actors = document.querySelector('.actors')
 const creators = document.querySelector('.creators')
-actors.addEventListener('click')
+const per_act = document.querySelector('.persons_act')
+const per_cre = document.querySelector('.persons_cre')
+actors.addEventListener('click',() =>{
+        per_act.classList.add('pers_active')
+        per_cre.classList.remove('pers_active')
+        document.querySelector('.actors').classList.add('btn_per_active')
+        document.querySelector('.creators').classList.remove('btn_per_active')
+})
+creators.addEventListener('click',() =>{
+        per_cre.classList.add('pers_active')
+        per_act.classList.remove('pers_active')
+        document.querySelector('.creators').classList.add('btn_per_active')
+        document.querySelector('.actors').classList.remove('btn_per_active')
+})
